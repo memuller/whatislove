@@ -10,4 +10,11 @@
   },
   "author": "Matheus E. Muller <hello@memuller.com>",
   "license": "WTFPL",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+
+  }
 }
