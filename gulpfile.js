@@ -16,3 +16,7 @@ gulp.task('kill', () => {
     love_runner = null
   }
 })
+
+gulp.task('watch', () => {
+  gulp.watch(['./lib/*.lua', '*.lua'], ['kill', 'run'])
+})
