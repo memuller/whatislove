@@ -10,3 +10,9 @@ gulp.task('run', () => {
   }
 })
 
+gulp.task('kill', () => {
+  if(love_runner){
+    love_runner.kill()
+    love_runner = null
+  }
+})
