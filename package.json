@@ -1,0 +1,20 @@
+{
+  "name": "what-is-love",
+  "version": "16.09.09a",
+  "description": "a project for learning how to work with LOVE.",
+  "main": "main.lua",
+  "scripts": {
+    "gulp": "node --harmony node_modules/gulp/bin/gulp.js",
+    "watch": "gulp watch",
+    "run": "gulp run"
+  },
+  "author": "Matheus E. Muller <hello@memuller.com>",
+  "license": "WTFPL",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+
+  }
+}
