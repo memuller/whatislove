@@ -1,3 +1,12 @@
-var gulp =        require('gulp'),
-    gutil =       require('gulp-util')
-    
+const gulp =    require('gulp')
+const gutil =   require('gulp-util')
+const spawn =   require('child_process').spawn
+
+var love_runner = null
+
+gulp.task('run', () => {
+  if(! love_runner){
+    love_runner = spawn('love', ['.'])
+  }
+})
+
