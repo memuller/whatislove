@@ -16,4 +16,8 @@ function Ship.place()
   local place = math.random(lanes)
   return Ship.width + (place*Ship.width), -Ship.height
 end
+function Ship:draw()
+  love.graphics.rectangle('fill', self.x, self.y, Ship.width, Ship.height)
+end
+
 return Ship
