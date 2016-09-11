@@ -4,14 +4,22 @@ local Player = {
   moveIncrement = 20
 }
 
-function Player:new(x,y)
+function Player:new()
   object = {}
   setmetatable(object, self)
   self.__index = self
 
-  object.x, object.y = x,y
+  object.x, object.y = Player.place()
 
   return object
+end
+
+-- Decides the player's initial position
+-- given the dimensions of the game itself.
+function Player:place()
+  y = love.graphics.getHeight() - Player.height -5
+  x = love.graphics.getWidth()/2
+  return x,y
 end
 
 function Player:update()
