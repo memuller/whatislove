@@ -1,0 +1,13 @@
+{
+  "name": "what-is-love",
+  "version": "16.09.09a",
+  "description": "a project for learning how to work with LOVE.",
+  "main": "main.lua",
+  "scripts": {
+    "gulp": "gulp",
+    "watch": "gulp watch",
+    "run": "gulp run"
+  },
+  "author": "Matheus E. Muller <hello@memuller.com>",
+  "license": "WTFPL",
+}
