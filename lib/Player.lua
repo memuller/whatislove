@@ -18,19 +18,28 @@ end
 -- given the dimensions of the game itself.
 function Player:place()
   y = love.graphics.getHeight() - Player.height -5
-  x = love.graphics.getWidth()/2
+  x = love.graphics.getWidth()/2 - Player.width/2
   return x,y
 end
 
 function Player:update()
   if love.keyboard.isDown('right') then
-    self.x = self.x + Player.moveIncrement
+    self:handleMoveRight()
   else
-    if love.keyboard.isDown('left') then
-      self.x = self.x - Player.moveIncrement
-    end
+    if love.keyboard.isDown('left') then self:handleMoveLeft() end
   end
+end
 
+function Player:handleMoveLeft()
+  if self.x - Player.moveIncrement >= 0 + Player.width/2 then
+    self.x = self.x - Player.moveIncrement
+  end
+end
+
+function Player:handleMoveRight()
+  if self.x + Player.moveIncrement <= love.graphics.getWidth() - Player.width/2 then
+    self.x = self.x + Player.moveIncrement
+  end
 end
 
 function Player:draw()
