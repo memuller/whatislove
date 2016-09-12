@@ -18,7 +18,7 @@ end
 -- given the dimensions of the game itself.
 function Player:place()
   y = love.graphics.getHeight() - Player.height -5
-  x = love.graphics.getWidth()/2 - Player.width/2
+  x = love.graphics.getWidth()/2
   return x,y
 end
 
