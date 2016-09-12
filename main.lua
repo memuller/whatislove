@@ -3,13 +3,14 @@ local Player = require('./lib/Player')
 local Ship = require('./lib/Ship')
 
 function love.load()
+  debug = ''
   math.randomseed(os.time())
   game = { time = 0 , ships = {}}
   player = Player:new()
 end
 
 function love.update(dt)
-  game.time = game.time + dt
+  game.time = game.time + dt --records elapsed time
   
   if Ship.shouldSpawn() then
     table.insert(game.ships, Ship:new())
@@ -29,4 +30,6 @@ function love.draw()
     v:draw()
   end
   player:draw()
+
+  love.graphics.print(debug, 5, 20)
 end
